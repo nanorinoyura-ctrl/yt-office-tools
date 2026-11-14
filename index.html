@@ -5,27 +5,69 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>代表室の道具</title>
 <style>
-  :root { --bg: #ffffff; --fg: #1f2328; --muted: #59636e; --link: #0969da; }
-  @media (prefers-color-scheme: dark) { :root { --bg: #0d1117; --fg: #e6edf3; --muted: #9198a1; --link: #4493f8; } }
+  :root { --bg: #ffffff; --fg: #1f2328; --muted: #59636e; --link: #0969da; --line: #d1d9e0; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0d1117; --fg: #e6edf3; --muted: #9198a1; --link: #4493f8; --line: #3d444d; } }
   body { background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Yu Gothic UI", sans-serif; line-height: 1.8; margin: 0; padding: 32px 16px; }
   main { max-width: 680px; margin: 0 auto; }
   h1 { font-size: 1.6rem; margin: 0 0 8px; }
-  p, li { color: var(--fg); }
-  .en { color: var(--muted); font-size: .95rem; }
-  a { color: var(--link); }
+  h2 { font-size: 1.15rem; margin: 28px 0 4px; }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+  a { color: var(--link); overflow-wrap: anywhere; }
 </style>
 </head>
 <body>
 <main>
   <h1>代表室の道具</h1>
-  <p>この道具は、持ち主が自分で運営している YouTube チャンネルのために、持ち主自身が使う、個人用のプログラムです。一般の人に向けた公開のサービスではありません。</p>
+  <p>最終更新：2026年11月14日</p>
+  <p>この道具は、持ち主が個人で運営している3つの YouTube チャンネル（「IF:ZERO」「大地の解読室」「歴史の脇役」）のために、持ち主ひとりが自分のパソコンで使う、社内用のプログラムです。一般の人に向けたサービスではなく、ほかの人はログインも利用もできません。</p>
+
+  <h2>できること</h2>
   <ul>
-    <li>YouTube Analytics API・YouTube Reporting API で、持ち主の自分のチャンネルの数字（表示回数・クリック率・再生・視聴時間など）を読みます。</li>
-    <li>YouTube Data API で、持ち主の自分のチャンネルに動画とサムネイルを上げます。</li>
-    <li>使うのは、持ち主の Google アカウントだけです。</li>
+    <li><strong>自分のチャンネルの数字を読む</strong>：YouTube Analytics API・YouTube Reporting API で、持ち主が許可した自分のチャンネルの数字（表示回数・クリック率・再生・視聴時間など）を読みます。</li>
+    <li><strong>自分の動画を直す</strong>：YouTube Data API で、持ち主の自分の動画の題名・説明・サムネイルを差し替えたり、公開の予約をしたりします。</li>
+    <li><strong>企画のための調べもの</strong>：YouTube Data API で、自分のジャンルの公開動画を検索し、公開されている動画とチャンネルの情報（題名・公開日・再生回数など）を読みます。いまどんな話題が見られているかを知るためと、自分の企画がほかの人の最近の動画と重なっていないか確かめるために使います。</li>
+    <li><strong>同じジャンルのチャンネルの新しい動画を見る</strong>：決まった公開チャンネル（約50）の新しい公開動画の一覧を、YouTube の数字のまま読みます。順位づけや集計、新しい数字の計算はしません。</li>
   </ul>
-  <p><a href="privacy.html">プライバシーポリシー</a></p>
-  <p class="en">This is a personal tool used only by its owner to read analytics for, and upload videos to, the owner's own YouTube channels through the official YouTube APIs. It is not a public service. <a href="privacy.html">Privacy Policy</a></p>
+
+  <h2>データの扱い</h2>
+  <ul>
+    <li>結果は持ち主のパソコンの中のメモに出します。メモの整理と作業の手伝いに AI アシスタント（Anthropic・OpenAI のクラウドのサービス）を使うため、データの一部が送られることがあります。それ以外の人に見せたり、公開したり、売ったりしません。</li>
+    <li>ほかのチャンネルの情報は、YouTube API サービスの開発者ポリシーに従い、30日以内に消すか、取り直します。</li>
+    <li>くわしくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</li>
+  </ul>
+
+  <h2>問い合わせ</h2>
+  <p><a href="mailto:clear.line798@gmail.com">clear.line798@gmail.com</a></p>
+
+  <p>この道具は YouTube API サービスを使っています。この道具を使うことで、<a href="https://www.youtube.com/t/terms">YouTube 利用規約</a>に同意したことになります。</p>
+
+  <hr>
+
+  <h1 lang="en">Daihyoshitsu Tools</h1>
+  <div lang="en">
+  <p>Last updated: November 14, 2026</p>
+  <p>This is an internal tool used by a single person, the owner, on the owner's own computer, for the three YouTube channels the owner runs as an individual creator ("IF:ZERO", "大地の解読室" and "歴史の脇役"). It is not a public service. No one else can sign in to it or use it.</p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li><strong>Reads analytics for the owner's own channels</strong> through the YouTube Analytics API and the YouTube Reporting API, with the owner's OAuth authorization (impressions, click-through rate, views, watch time, and similar metrics).</li>
+    <li><strong>Updates the owner's own videos</strong> through the YouTube Data API: titles, descriptions and thumbnails, and scheduled publishing.</li>
+    <li><strong>Research for content planning</strong>: searches public videos in the owner's genres and reads public information about videos and channels (title, publish date, view count, etc.) through the YouTube Data API, to see which topics are being watched and to check that the owner's planned videos do not copy other creators' recent videos.</li>
+    <li><strong>Watches new videos in the same genres</strong>: reads the list of newly published public videos from a fixed set of about 50 public channels, with figures as provided by YouTube. It does not rank, aggregate or calculate new metrics from them.</li>
+  </ul>
+
+  <h2>How data is handled</h2>
+  <ul>
+    <li>Results appear in local notes on the owner's computer. The owner uses AI assistant services (cloud services by Anthropic and OpenAI) to organize notes and assist with the work, so some data may be sent to them. Otherwise results are not shown to anyone else, published or sold.</li>
+    <li>Information about other channels is deleted or refreshed within 30 days, as required by the YouTube API Services Developer Policies.</li>
+    <li>See the <a href="privacy.html">Privacy Policy</a> for details.</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:clear.line798@gmail.com">clear.line798@gmail.com</a></p>
+
+  <p>This tool uses YouTube API Services. By using the tool, users agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.</p>
+  </div>
 </main>
 </body>
 </html>

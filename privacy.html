@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>プライバシーポリシー</title>
 <style>
-  :root { --bg: #ffffff; --fg: #1f2328; --muted: #59636e; --link: #0969da; }
-  @media (prefers-color-scheme: dark) { :root { --bg: #0d1117; --fg: #e6edf3; --muted: #9198a1; --link: #4493f8; } }
+  :root { --bg: #ffffff; --fg: #1f2328; --muted: #59636e; --link: #0969da; --line: #d1d9e0; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0d1117; --fg: #e6edf3; --muted: #9198a1; --link: #4493f8; --line: #3d444d; } }
   body { background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Yu Gothic UI", sans-serif; line-height: 1.8; margin: 0; padding: 32px 16px; }
   main { max-width: 680px; margin: 0 auto; }
   h1 { font-size: 1.6rem; margin: 0 0 8px; }
   h2 { font-size: 1.15rem; margin: 28px 0 4px; }
-  .en { color: var(--muted); font-size: .95rem; }
-  a { color: var(--link); }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+  a { color: var(--link); overflow-wrap: anywhere; }
 </style>
 </head>
 <body>
@@ -20,22 +20,70 @@
   <h1>プライバシーポリシー（代表室の道具）</h1>
   <p>最終更新：2026年11月14日</p>
 
-  <h2>だれが使うか</h2>
-  <p>この道具は、持ち主が自分の YouTube チャンネルのために使う個人用のプログラムです。使うのは持ち主の Google アカウントだけで、ほかの人のアカウントのデータは扱いません。</p>
+  <h2>1. だれが使うか</h2>
+  <p>「代表室の道具」（以下、この道具）は、持ち主が個人で運営している自分の YouTube チャンネルのために、持ち主ひとりが自分のパソコンで使う社内用のプログラムです。使う Google アカウントは持ち主のものだけで、ほかの人がログインしたり、ほかの人のアカウントのデータを読んだりすることはありません。</p>
 
-  <h2>扱うデータ</h2>
-  <p>持ち主が許可した範囲で、YouTube API サービスを通して、持ち主の自分のチャンネルの数字（表示回数・クリック率・再生・視聴時間・視聴者維持率・流入元など）と、チャンネルの基本情報を読みます。また、持ち主の動画とサムネイルを、持ち主のチャンネルに上げます。</p>
+  <h2>2. 使っているサービス</h2>
+  <p>この道具は YouTube API サービス（YouTube Data API・YouTube Analytics API・YouTube Reporting API）を使っています。この道具を使うことで、<a href="https://www.youtube.com/t/terms">YouTube 利用規約</a>に同意したことになります。<a href="https://policies.google.com/privacy">Google プライバシー ポリシー</a>も適用されます。</p>
 
-  <h2>データの置き場所と共有</h2>
-  <p>読んだデータと、許可の情報（トークン）は、持ち主のパソコンの中にだけ保存します。第三者に売ったり、渡したり、広告に使ったりしません。</p>
+  <h2>3. 扱うデータ</h2>
+  <p><strong>(1) 持ち主の自分のチャンネルのデータ</strong>：持ち主が OAuth で許可した範囲で、自分のチャンネルの基本情報と数字（表示回数・クリック率・再生・視聴時間・視聴者維持率・流入元など）を読みます。また、持ち主の自分の動画の題名・説明・サムネイルの差し替えと、公開の予約をします。</p>
+  <p><strong>(2) ほかのチャンネルの公開データ</strong>：企画のための調べもの（いまどんな話題が見られているか、自分の企画がほかの人の最近の動画と重なっていないか）のために、自分のジャンルの公開動画を検索し、公開されている動画とチャンネルの情報（題名・公開日・再生回数・登録者数・サムネイルなど）を読みます。また、同じジャンルの決まった公開チャンネル（約50）について、新しく出た公開動画の一覧（題名・公開日・再生回数・サムネイル）を読みます。数字は YouTube のまま見るだけで、順位づけ・集計・新しい数字の計算はしません。ほかの人の非公開の情報は扱わず、公開されているチャンネル名や題名のほかに、個人を見分ける情報は集めません。</p>
 
-  <h2>保存の期間と削除</h2>
-  <p>YouTube API サービスの開発者ポリシーに従って保存します。許可は、持ち主がいつでも Google アカウントの「サードパーティのアクセス」（<a href="https://myaccount.google.com/connections">https://myaccount.google.com/connections</a>）から取り消せます。取り消したとき、または持ち主が求めたときは、保存したデータを消します。</p>
+  <h2>4. データの置き場所と共有</h2>
+  <p>読んだデータと、許可の情報（トークン）は、持ち主のパソコンの中に保存します。持ち主は、メモの整理と作業の手伝いに AI アシスタント（Anthropic・OpenAI のクラウドのサービス）を使っており、その処理のためにデータの一部が送られることがあります。それ以外の第三者には渡さず、公開せず、売らず、広告にも使いません。この道具とこのページは、クッキーや広告、アクセス解析を使いません。</p>
 
-  <h2>YouTube と Google のポリシー</h2>
-  <p>この道具は YouTube API サービスを使っています。<a href="https://www.youtube.com/t/terms">YouTube 利用規約</a>と <a href="https://policies.google.com/privacy">Google プライバシー ポリシー</a>も適用されます。</p>
+  <h2>5. 保存の期間と削除</h2>
+  <ul>
+    <li><strong>ほかのチャンネルの公開データ</strong>：取ってから30日以内に、消すか、取り直して新しくします。自動の掃除を、ふだんは毎日動かします。手で書いたメモは、持ち主が30日以内に手で直します。</li>
+    <li><strong>持ち主の自分のチャンネルのデータ</strong>：数字の履歴として、許可が続いている間、保存します。許可が続いているかを毎日（少なくとも30日ごとに）確かめます。許可の取り消しが分かったとき、または消してほしいと頼まれたときは、7日以内に消します。許可が確かめられなくなったときは、最後に確かめた日から30日以内に、許可を取り直すか、データを消します。消してほしいときは、下の問い合わせ先へご連絡ください。</li>
+    <li><strong>トークン</strong>：持ち主のパソコンの中にだけ置き、上の決まりでデータを消すときに一緒に消します。</li>
+  </ul>
 
-  <p class="en">Privacy Policy (summary in English): This personal tool is used only by its owner. Through the YouTube API Services and with the owner's authorization, it reads analytics and basic information for the owner's own YouTube channels and uploads the owner's videos and thumbnails. Data and authorization tokens are stored only on the owner's computer and are never sold or shared with third parties. Authorization can be revoked at any time at https://myaccount.google.com/connections. This tool uses YouTube API Services; the YouTube Terms of Service (https://www.youtube.com/t/terms) and the Google Privacy Policy (https://policies.google.com/privacy) apply.</p>
+  <h2>6. 許可の取り消し方</h2>
+  <p>この道具への許可は、いつでも Google アカウントのセキュリティの設定（<a href="https://security.google.com/settings/security/permissions">https://security.google.com/settings/security/permissions</a>）から取り消せます。</p>
+
+  <h2>7. このポリシーの変更</h2>
+  <p>使い方が変わったときは、このページを直し、上の「最終更新」の日付を新しくします。</p>
+
+  <h2>8. 問い合わせ</h2>
+  <p><a href="mailto:clear.line798@gmail.com">clear.line798@gmail.com</a></p>
+
+  <hr>
+
+  <div lang="en">
+  <h1>Privacy Policy (Daihyoshitsu Tools)</h1>
+  <p>Last updated: November 14, 2026</p>
+
+  <h2>1. Who uses this tool</h2>
+  <p>"Daihyoshitsu Tools" ("the tool") is an internal program used by a single person, the owner, on the owner's own computer, for the YouTube channels the owner runs as an individual creator. Only the owner's Google account is used. No one else can sign in, and the tool never reads data from other people's accounts.</p>
+
+  <h2>2. Services used</h2>
+  <p>The tool uses YouTube API Services (YouTube Data API, YouTube Analytics API and YouTube Reporting API). By using the tool, users agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. The <a href="https://policies.google.com/privacy">Google Privacy Policy</a> also applies.</p>
+
+  <h2>3. Data the tool handles</h2>
+  <p><strong>(1) Data about the owner's own channels</strong>: within the scope the owner authorizes with OAuth, the tool reads basic channel information and metrics (impressions, click-through rate, views, watch time, audience retention, traffic sources, etc.) for the owner's own channels. It also updates titles, descriptions and thumbnails of the owner's own videos and schedules their publishing.</p>
+  <p><strong>(2) Public data about other channels</strong>: for content planning (to see which topics are being watched and to check that the owner's planned videos do not overlap with other creators' recent videos), the tool searches public videos in the owner's genres and reads public information about videos and channels (title, publish date, view count, subscriber count, thumbnails, etc.). The tool also reads the list of newly published public videos (title, publish date, view count, thumbnail) from a fixed set of about 50 public channels in the same genres. Figures are viewed as provided by YouTube; the tool does not rank, aggregate or calculate new metrics from them. It does not handle non-public information about other people, and apart from public channel names and titles, it does not collect information that identifies individuals.</p>
+
+  <h2>4. Where data is kept and sharing</h2>
+  <p>Data and authorization tokens are stored on the owner's computer. The owner uses AI assistant services (cloud services by Anthropic and OpenAI) to organize notes and assist with the work, and some data may be sent to them for that processing. Otherwise data is not shared with third parties, published, sold or used for advertising. Neither the tool nor this website uses cookies, advertising or analytics.</p>
+
+  <h2>5. Retention and deletion</h2>
+  <ul>
+    <li><strong>Public data about other channels</strong> is deleted or refreshed within 30 days of being retrieved. An automatic cleanup normally runs daily; hand-written notes are corrected manually by the owner within 30 days.</li>
+    <li><strong>Data about the owner's own channels</strong> is kept as a history of metrics while the authorization remains valid. Authorization is verified daily (and at least every 30 days). The data is deleted within 7 days after a revocation becomes known or after a deletion request. If authorization can no longer be verified, it is either renewed or the data is deleted within 30 days of the last successful verification. To request deletion, use the contact below.</li>
+    <li><strong>Authorization tokens</strong> are kept only on the owner's computer and are deleted together with the data under the rules above.</li>
+  </ul>
+
+  <h2>6. How to revoke access</h2>
+  <p>Access granted to the tool can be revoked at any time from the Google security settings page: <a href="https://security.google.com/settings/security/permissions">https://security.google.com/settings/security/permissions</a>.</p>
+
+  <h2>7. Changes to this policy</h2>
+  <p>If the way the tool works changes, this page will be updated and the "Last updated" date above will be changed.</p>
+
+  <h2>8. Contact</h2>
+  <p><a href="mailto:clear.line798@gmail.com">clear.line798@gmail.com</a></p>
+  </div>
 </main>
 </body>
 </html>
